@@ -1,10 +1,11 @@
 {
   "name": "prueba_desempe-o_db",
   "version": "1.0.0",
-  "description": "",
+  "description": "WITH ins_users AS (     INSERT INTO juan_lopez.users          (customer_name, customer_email, customer_address, customer_phone)     SELECT          t.customer_name,         t.customer_email,         t.customer_address,         t.customer_phone     FROM juan_lopez.test t     ON CONFLICT (customer_email) DO NOTHING     RETURNING id_user ),",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,7 @@
   "dependencies": {
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
-    "mongoose": "^9.2.3",
-    "openai": "^6.22.0",
     "pg": "^8.19.0",
-    "swagger-ui-express": "5.0.1"
+    "router": "^2.2.0"
   }
 }

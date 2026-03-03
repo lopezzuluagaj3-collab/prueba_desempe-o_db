@@ -1,9 +1,10 @@
 import express from 'express'
-import questionRoutes from './routes/question.route.js'
+import usersRoutes from './routes/users.route.js'
 
 const app = express()
 
 app.use(express.json())
-app.use('/questions', questionRoutes)
+app.use('/users', usersRoutes)
+
 
 export default app
