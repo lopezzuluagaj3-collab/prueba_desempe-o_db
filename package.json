@@ -24,5 +24,6 @@
     "express": "^5.2.1",
     "pg": "^8.19.0",
     "router": "^2.2.0"
-  }
+  },
+  "devDependencies": {}
 }
